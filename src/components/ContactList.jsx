@@ -9,6 +9,7 @@ import {
 } from './App.styled';
 
 const filterContacts = (items, filter) => {
+  console.log(items)
   return items.filter(contacts =>
     contacts.name.toLowerCase().includes(filter.toLowerCase())
   );
@@ -20,12 +21,12 @@ export const ContactList = () => {
   const dispatch = useDispatch();
 
   const visibleContacts = filterContacts(contacts, filter);
-
+  console.log(visibleContacts)
   return (
     <ContactsList>
       {visibleContacts.map(contact => (
         <ContactsItem key={contact.id}>
-          {`${contact.name} : ${contact.number}`}
+          {`${contact.name} : ${contact.phone}`}
           {
             <DeleteButton
               type="button"
