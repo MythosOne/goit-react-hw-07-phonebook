@@ -1,7 +1,7 @@
 import { ContactForm } from './ContactForm';
 import { Filter } from './Filter';
 import { ContactList } from './ContactList';
-import { Container, TitleContainer, TitleContacts } from './App.styled';
+import { Container, TitleContainer, TitleContacts, Loading } from './App.styled';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from '../redux/operations';
@@ -22,7 +22,9 @@ export const App = () => {
       <ContactForm />
       <TitleContacts>Contacts</TitleContacts>
       <Filter />
-      {isLoading && !error && <b>Request in progress... 👌</b>}
+      <Loading>
+        {isLoading && !error && <p>Request in progress... 👌</p>}
+      </Loading>
       <ContactList />
     </Container>
   );

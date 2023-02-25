@@ -114,3 +114,12 @@ export const Message = styled.ul`
     font-weight: 600;
     color: orange;
 `;
+
+export const Loading = styled.p`
+    padding: 0;
+    text-align: center;
+
+    font-size: 16px;
+    font-weight: 600;
+    color: #2196f3;
+`;
