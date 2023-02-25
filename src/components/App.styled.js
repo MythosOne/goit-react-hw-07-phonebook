@@ -115,7 +115,7 @@ export const Message = styled.ul`
     color: orange;
 `;
 
-export const Loading = styled.p`
+export const Loading = styled.b`
     padding: 0;
     text-align: center;
 
